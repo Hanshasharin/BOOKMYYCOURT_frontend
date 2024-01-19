@@ -3,7 +3,7 @@ import "./Authorization.css"
 import axios from 'axios'
 
 
-function SignUp() {
+function SignUp({togglebox}) {
 // const [signUpdata , setSignupData] = useState({
 //   name:'',
 //   email:'',
@@ -58,7 +58,7 @@ console.log(err)
 }
 
   return (
-    <div  className='signup_box d-flex flex-column p-3  m-2'>
+    <div  className='signup_box d-flex flex-column p-3  m-3'>
         <h3 className='text-center'>signup</h3>
       <label htmlFor="">Name</label>
       <input name='name' type="text" value={name} onChange={handlename}/>
@@ -71,6 +71,9 @@ console.log(err)
       <label htmlFor="">Pasword</label>
       <input type="password"name='confirmpassword' value={confirmpassword} onChange={handleConfirmPassword} />
       <button className='btn btn-primary mt-3' onClick={doSignUp}>submit</button>
+
+     <p>already signup, then <i onClick={()=>togglebox('login')}>login</i></p>
+
     </div>
   )
 }
