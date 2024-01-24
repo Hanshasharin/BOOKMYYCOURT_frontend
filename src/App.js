@@ -1,5 +1,6 @@
 
 import './App.css';
+import CourtDetails from './pages/CourtDetails/CourtDetails';
 import HomePage from './pages/HomePage/HomePage';
 import AddNewCourt from './pages/NewCourt/AddNewCourt';
 import LoginPage from './pages/loginpage/LoginPage';
@@ -19,7 +20,7 @@ function App() {
 <Route path='/' element= {<LoginPage/>}/>
 <Route path='/home' element= {<HomePage/>}> </Route>
  <Route path='/addNewCourt' element= {<AddNewCourt/>}></Route> 
-
+ <Route path='/CourtDetails/:id' element= {<CourtDetails/>}></Route> 
 </Routes>
 
 </BrowserRouter>
